@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noa Jump</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="intro-panel" aria-label="Game introduction">
+        <p class="eyebrow">Noa Jump</p>
+        <h1>Bounce the duo sky-high.</h1>
+        <p class="intro-copy">Left and right arrows only.</p>
+        <img
+          class="reference-card"
+          src="./characters-reference.png"
+          alt="Reference illustration of the two stick-figure characters."
+        />
+      </section>
+
+      <section class="game-panel" aria-label="Noa jumping game">
+        <canvas
+          id="gameCanvas"
+          width="655"
+          height="988"
+          aria-label="Arcade game where two stick-figure characters bounce on trampolines"
+        ></canvas>
+
+        <div class="hud">
+          <img class="brand-logo" src="./noa-logo.png" alt="Noa brand logo" />
+
+          <div class="score-group">
+            <div class="score-pill">
+              <span class="pill-label">Height</span>
+              <strong id="scoreValue">0 m</strong>
+            </div>
+            <div class="score-pill">
+              <span class="pill-label">Best</span>
+              <strong id="bestValue">0 m</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="status-banner" id="statusBanner">
+          Press left or right to start
+        </div>
+      </section>
+    </main>
+
+    <script defer src="./game.js"></script>
+  </body>
+</html>
